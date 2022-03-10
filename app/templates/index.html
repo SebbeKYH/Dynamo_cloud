@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automatic Gearbox</title>
+    <style>
+        table {
+            width: 30%;
+            border: 1px black  solid;
+
+        }
+        td {
+            border: 1px black solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>HR</th>
+            <th>GEAR</th>
+        </tr>
+        {% for reading in readings %}
+            <tr>
+                <td>
+                    {{ reading['sensor'] }}
+                </td>
+                <td>
+                    {{ reading['heartrate'] }}
+                </td>
+                <td>
+                    {{ reading['gearbox'] }}
+                </td>
+
+
+        {% endfor %}
+    </table>
+</body>
+</html>
